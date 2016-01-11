@@ -104,4 +104,5 @@ a{
 	left: 0;
 	width: 22%;
 	height: 25%;
+	z-index: 10;
 }

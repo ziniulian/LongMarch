@@ -111,8 +111,6 @@ a{
 	position: relative;
 	margin: 10px 0 0 22px;
 	width: 90%;
-	/*height: 50px;*/
-	/*background-color: #FF0;*/
 }
 
 .button {
@@ -133,10 +131,9 @@ a{
 	background-position: center center;
 	background-size: 100% 100%;
 }
-
-.select {
+.button:hover {
 	color: #FFF;
-	text-shadow: 1px 1px 8px #FF0, -1px -1px 8px #FF0;
+	text-shadow: 0 0 5px #F91;
 }
 
 .pageUp {
@@ -233,5 +230,26 @@ a{
 }
 .item:hover {
 	color: #FFF;
+	text-shadow: 0 0 5px #F91;
+}
+
+.select {
+	color: #FFF;
 	text-shadow: 1px 1px 8px #FF0, -1px -1px 8px #FF0;
+}
+
+.left .summary_img {
+	background-image: url(../img/summary_img.png);
+}
+
+.left .back_img {
+	background-image: url(../img/back_img.png);
+}
+
+.left .process_img {
+	background-image: url(../img/process_img.png);
+}
+
+.left .place_img {
+	background-image: url(../img/place_img.png);
 }

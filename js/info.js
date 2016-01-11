@@ -11,15 +11,19 @@ data = {
 		video: "视频资料"
 	},
 
-	init: function (s) {
-		data.initButton();
+	init: function (s, hid) {
+		data.initButton(hid);
 		data.selectFram(s);
 	},
 
-	initButton: function () {
+	initButton: function (hid) {
 		for (var s in data.btns) {
 			var d = document.createElement("div");
 			d.className = "button noselected";
+			if (hid === true) {
+				d.style.visibility = "hidden";
+				title.style.visibility = "hidden";
+			}
 			d.innerHTML = s;
 			d.onclick = data.changeFram;
 			data.btns[s].div = d;
@@ -84,11 +88,8 @@ data = {
 	flush: function () {
 		data.frm.innerHTML = "";
 		var ifm = document.createElement("IFRAME");
-		ifm.className = "content";
 		ifm.src = data.btns[data.cur][data.ind];
-		ifm.frameBorder = 0;
-		ifm.width = "100%";
-		ifm.height = "100%";
+		ifm.className = "content";
 		data.frm.appendChild(ifm);
 	},
 
@@ -157,7 +158,7 @@ data = {
 
 
 	// 生成info的界面
-	buildInfo: function (id) {
+	buildInfo: function (id, infoBarBackImg) {
 		info.innerHTML = LZR.loadByAjax("../../info.htm");
 		title.innerHTML = data.menus[id];
 		data.bar = infoBar;
@@ -166,22 +167,29 @@ data = {
 		data.num = pageNum;
 		data.dw = pageDown;
 
+		if (infoBarBackImg) {
+			var s = infoBar.className;
+			infoBar.className = s + " " + infoBarBackImg;
+		}
+
 		var d = document.createElement("div");
 		d.className = "item";
 		d.innerHTML = "首页";
 		var a = document.createElement("a");
 		a.href = "../../index.html";
-		a.target = "_self";
 		a.appendChild(d);
 		menu.appendChild(a);
 
 		for (var s in data.menus) {
 			d = document.createElement("div");
-			d.className = "item";
+			if (s == id) {
+				d.className = "item select";
+			} else {
+				d.className = "item";
+			}
 			d.innerHTML = data.menus[s];
 			a = document.createElement("a");
 			a.href = "../../web/" + s + "/info.html";
-			a.target = "_self";
 			a.appendChild(d);
 			menu.appendChild(a);
 		}
