@@ -33,15 +33,14 @@ a{
 .left {
 	float: left;
 	width: 25%;
-	/*height: 100%;*/
-	/*background-color: #FF0;*/
+	height: 100%;
 }
 
 .right {
+	position: relative;
 	float: left;
 	width: 75%;
-	/*height: 100%;*/
-	/*background-color: #FF0;*/
+	height: 100%;
 }
 
 .toolbar {
@@ -49,7 +48,7 @@ a{
 	float: right;
 	padding: 30px 0 20px 0;
 	width: 220px;
-	min-height: 65%;
+	min-height: calc(80% - 30px);
 	background-image: url(../img/bar.png);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -112,8 +111,6 @@ a{
 	position: relative;
 	margin: 10px 0 0 22px;
 	width: 90%;
-	/*height: 50px;*/
-	/*background-color: #FF0;*/
 }
 
 .button {
@@ -203,4 +200,36 @@ a{
 	height: calc(100% - 18px);
 	box-shadow: 0 0 10px #333;
 	background-color: #FFF;
+}
+
+.menu {
+	position: absolute;
+	left: 23px;
+	top: -30px;
+	width: 90%;
+	height: 30px;
+}
+
+.menu .item {
+	float: left;
+	width: 12.5%;
+	height: 30px;
+	overflow: hidden;
+
+	line-height: 30px;
+	font-family: "Microsoft YaHei", "黑体";
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	color: #EEE;
+	text-shadow: 0 3px 3px #333, 0 1px 5px #F91;
+
+	background-image: url(../img/menu.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+.menu .item:hover {
+	color: #FFF;
+	text-shadow: 1px 1px 8px #FF0, -1px -1px 8px #FF0;
 }

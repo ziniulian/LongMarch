@@ -1,6 +1,15 @@
 data = {
 	ind: 0,
 	cur: "",
+	menus: {
+		summary: "简介",
+		back: "会师背景",
+		process: "会师过程",
+		place: "会师地位",
+		figure: "会师人物",
+		history: "会师史料",
+		video: "视频资料"
+	},
 
 	init: function (s) {
 		data.initButton();
@@ -75,8 +84,11 @@ data = {
 	flush: function () {
 		data.frm.innerHTML = "";
 		var ifm = document.createElement("IFRAME");
-		ifm.src = data.btns[data.cur][data.ind];
 		ifm.className = "content";
+		ifm.src = data.btns[data.cur][data.ind];
+		ifm.frameBorder = 0;
+		ifm.width = "100%";
+		ifm.height = "100%";
 		data.frm.appendChild(ifm);
 	},
 
@@ -140,4 +152,3 @@ data = {
 		vd.player.removeChild(vd.player.lastChild);
 	}
 };
-
