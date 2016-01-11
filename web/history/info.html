@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<title>testRegStat</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="../../css/info.css">
+		<script type="text/javascript" src="../../js/info.js"></script>
+	</head>
+
+	<body style="margin:0; background-color: #F00;">
+		<div class="background">
+			<div class="contentCenter">
+				<div class="left">
+					<div class="toolbar" id="infoBar">
+						<img class="logo" src="../../img/logo.png">
+						<a href="../../index.html" target="_self">
+							<div class="back noselected">
+								返&nbsp&nbsp&nbsp回
+							</div>
+						</a>
+						<div class="title">&nbsp&nbsp简&nbsp&nbsp介</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="contentOut" id="infoFram"></div>
+					<div class="bot">
+						<div class="pageUp noselected" id="pageUp">
+							上一页
+						</div>
+						<div class="pageNum" id="pageNum"></div>
+						<div class="pageDown noselected" id="pageDown">
+							下一页
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		data.bar = infoBar;
+		data.frm = infoFram;
+		data.up = pageUp;
+		data.num = pageNum;
+		data.dw = pageDown;
+		data.btns = {
+			"文献汇编": [
+				"data/a1.htm",
+				"data/a2.htm",
+				"data/a3.htm",
+				"data/a4.htm",
+				"data/a5.htm",
+				"data/a6.htm",
+				"data/a7.htm",
+				"data/a8.htm",
+				"data/a9.htm",
+				"data/a10.htm",
+				"data/a11.htm",
+				"data/a12.htm",
+				"data/a13.htm",
+				"data/a14.htm",
+				"data/a15.htm",
+				"data/a16.htm",
+				"data/a17.htm",
+				"data/a18.htm",
+				"data/a19.htm",
+				"data/a20.htm",
+				"data/a21.htm",
+				"data/a22.htm",
+				"data/a23.htm"
+			],
+			"历史遗址": [
+				"data/yz/b1.htm",
+				"data/yz/b2.htm",
+				"data/yz/b3.htm",
+				"data/yz/b5.htm",
+				"data/yz/b6.htm",
+				"data/yz/b7.htm",
+				"data/yz/b8.htm",
+				"data/yz/b9.htm",
+				"data/yz/b10.htm",
+				"data/yz/b11.htm",
+				"data/yz/b4.htm"
+			],
+			"报刊资料": [
+				"data/b1.htm",
+				"data/b2.htm",
+				"data/b3.htm",
+				"data/b4.htm",
+				"data/b5.htm",
+				"data/b6.htm"
+			],
+			"图片资料": [
+				"data/c1.htm",
+				"data/c2.htm",
+				"data/c3.htm",
+				"data/c4.htm",
+				"data/c5.htm",
+				"data/c6.htm",
+				"data/c7.htm",
+				"data/c8.htm",
+				"data/c9.htm",
+				"data/c10.htm",
+				"data/c11.htm",
+				"data/c12.htm",
+				"data/c13.htm",
+				"data/c14.htm",
+				"data/c15.htm",
+				"data/c16.htm",
+				"data/c17.htm",
+				"data/c18.htm",
+				"data/c19.htm",
+				"data/c20.htm",
+				"data/c21.htm",
+				"data/c22.htm",
+				"data/c23.htm",
+				"data/c24.htm",
+				"data/c25.htm",
+				"data/c26.htm",
+				"data/c27.htm",
+				"data/c28.htm",
+				"data/c29.htm",
+				"data/c30.htm",
+				"data/c31.htm",
+				"data/c32.htm",
+				"data/c33.htm",
+				"data/c34.htm",
+				"data/c35.htm",
+				"data/c36.htm",
+				"data/c37.htm",
+				"data/c38.htm",
+				"data/c39.htm",
+				"data/c40.htm",
+				"data/c41.htm",
+				"data/c42.htm",
+				"data/c43.htm",
+				"data/c44.htm",
+				"data/c45.htm",
+				"data/c46.htm",
+				"data/c47.htm",
+				"data/c48.htm",
+				"data/c49.htm",
+				"data/c50.htm",
+				"data/c51.htm",
+				"data/c52.htm",
+				"data/c53.htm",
+				"data/c54.htm",
+				"data/c55.htm",
+				"data/c56.htm",
+				"data/c57.htm",
+				"data/c58.htm",
+				"data/c59.htm",
+				"data/c60.htm",
+				"data/c61.htm",
+				"data/c62.htm",
+				"data/c63.htm",
+				"data/c64.htm",
+				"data/c65.htm",
+				"data/c66.htm",
+				"data/c67.htm",
+				"data/c68.htm",
+				"data/c69.htm",
+				"data/c70.htm",
+				"data/c71.htm",
+				"data/c72.htm",
+				"data/c73.htm",
+				"data/c74.htm",
+				"data/c75.htm",
+				"data/c76.htm",
+				"data/c77.htm",
+				"data/c78.htm",
+				"data/c79.htm",
+				"data/c80.htm",
+				"data/c81.htm",
+				"data/c82.htm",
+				"data/c83.htm",
+				"data/c84.htm",
+				"data/c85.htm",
+				"data/c86.htm",
+				"data/c87.htm",
+				"data/c88.htm",
+				"data/c89.htm",
+				"data/c90.htm",
+				"data/c91.htm",
+				"data/c92.htm",
+				"data/c93.htm",
+				"data/c94.htm",
+				"data/c95.htm",
+				"data/c96.htm",
+				"data/c97.htm",
+				"data/c98.htm",
+				"data/c99.htm",
+				"data/c100.htm",
+				"data/c101.htm",
+				"data/c102.htm",
+				"data/c103.htm",
+				"data/c104.htm",
+				"data/c105.htm",
+				"data/c106.htm",
+				"data/c107.htm",
+				"data/c108.htm",
+				"data/c109.htm",
+				"data/c110.htm",
+				"data/c111.htm",
+				"data/c112.htm"
+			]
+		};
+		data.init("文献汇编");
+	</script>
+</html> 

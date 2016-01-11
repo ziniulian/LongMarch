@@ -1,0 +1,101 @@
+a{
+	text-decoration:none;
+}
+.noselected {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	cursor: pointer;
+}
+
+.background {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/indexBack.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.content {
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	left: 50%;
+	margin-left: -45%;
+	top: 10%;
+}
+
+.toolbar {
+	float: left;
+	width: 25%;
+}
+
+.left {
+	float: right;
+	padding: 5% 0 0 0;
+}
+
+.button {
+	width: 110px;
+	height: 50px;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 60px;
+
+	font-family: "Microsoft YaHei", "黑体";
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 45px;
+	color: #EEE;
+	text-shadow: 0 3px 3px #333;
+
+	background-image: url(../img/button.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+.viewOut {
+	position: relative;
+	float: left;
+	width: 75%;
+	margin: 2% 0 0 0;
+	height: 75%;
+	background-image: url(../img/viewOut.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+.play {
+	position: absolute;
+	top: 6%;
+	left: 12%;
+	width: 77%;
+	height: 82%;
+}
+
+.memo {
+	position: absolute;
+	bottom: 6%;
+	right: 10%;
+	font-family: "Microsoft YaHei", "黑体";
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	line-height: 10px;
+	color: #CCC;
+	text-shadow: 1px 1px #000, 2px 2px #000, 1px 1px 6px #333, -1px -1px 6px #333;
+}
+
+.logo {
+	position: absolute;
+	top: -10%;
+	left: 0;
+	width: 22%;
+	height: 25%;
+}

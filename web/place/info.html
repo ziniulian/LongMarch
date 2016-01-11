@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>testRegStat</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="../../css/info.css">
+		<script type="text/javascript" src="../../js/info.js"></script>
+	</head>
+
+	<body style="margin:0; background-color: #F00;">
+		<div class="background">
+			<div class="contentCenter">
+				<div class="left">
+					<div class="toolbar" id="infoBar">
+						<img class="logo" src="../../img/logo.png">
+						<a href="../../index.html" target="_self">
+							<div class="back noselected">
+								返&nbsp&nbsp&nbsp回
+							</div>
+						</a>
+						<div class="title">&nbsp&nbsp简&nbsp&nbsp介</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="contentOut" id="infoFram"></div>
+					<div class="bot">
+						<div class="pageUp noselected" id="pageUp">
+							上一页
+						</div>
+						<div class="pageNum" id="pageNum"></div>
+						<div class="pageDown noselected" id="pageDown">
+							下一页
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		data.bar = infoBar;
+		data.frm = infoFram;
+		data.up = pageUp;
+		data.num = pageNum;
+		data.dw = pageDown;
+		data.btns = {
+			"会师地位": [
+				"data/a.htm"
+			]
+		};
+		data.init("会师地位");
+	</script>
+</html> 
