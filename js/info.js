@@ -150,5 +150,85 @@ data = {
 		var vd = tar.dat;
 		vd.player.style.display = "none";
 		vd.player.removeChild(vd.player.lastChild);
+	},
+
+
+// ------------------ Info -------------------
+
+
+	// 生成info的界面
+	buildInfo: function (id) {
+		info.innerHTML = LZR.loadByAjax("../../info.htm");
+		title.innerHTML = data.menus[id];
+		data.bar = infoBar;
+		data.frm = infoFram;
+		data.up = pageUp;
+		data.num = pageNum;
+		data.dw = pageDown;
+
+		var d = document.createElement("div");
+		d.className = "item";
+		d.innerHTML = "首页";
+		var a = document.createElement("a");
+		a.href = "../../index.html";
+		a.target = "_self";
+		a.appendChild(d);
+		menu.appendChild(a);
+
+		for (var s in data.menus) {
+			d = document.createElement("div");
+			d.className = "item";
+			d.innerHTML = data.menus[s];
+			a = document.createElement("a");
+			a.href = "../../web/" + s + "/info.html";
+			a.target = "_self";
+			a.appendChild(d);
+			menu.appendChild(a);
+		}
 	}
 };
+
+LZR = {};
+
+// 用于同步加载其它类的简易 Ajax 对象
+LZR.spAjax = null;	/*as:Object*/
+
+// Ajax 形式加载文本
+LZR.loadByAjax = function (path/*as:string*/) {
+	if (this.spAjax === null) {
+		try{
+			this.spAjax = new XMLHttpRequest();
+		} catch (MSIEx) {
+			var activeX = [ "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP" ];
+			for (var i=0; i < activeX.length; i++) {
+				try {
+					this.spAjax = new ActiveXObject( activeX[i] );
+				} catch (e) {}
+			}
+		}
+		if (this.spAjax === null) {
+			this.spAjax = "null";
+			return null;
+		} else {
+			this.spAjax.LZR_domHead_ = document.getElementsByTagName("HEAD").item(0);
+		}
+	} else if (this.spAjax === "null") {
+		return null;
+	}
+
+	//采用同步加载
+	this.spAjax.open("GET", path, false);
+
+	//发送同步请求
+	this.spAjax.send(null);
+
+	//4代表数据发送完毕
+	if ( this.spAjax.readyState == 4 ) {
+		//0为访问的本地，200到300代表访问服务器成功，304代表没做修改访问的是缓存
+		if((this.spAjax.status >= 200 && this.spAjax.status <300) || this.spAjax.status === 0 || this.spAjax.status == 304) {
+			return this.spAjax.responseText;
+		}
+	}
+	return null;
+};
+

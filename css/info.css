@@ -111,6 +111,8 @@ a{
 	position: relative;
 	margin: 10px 0 0 22px;
 	width: 90%;
+	/*height: 50px;*/
+	/*background-color: #FF0;*/
 }
 
 .button {
@@ -204,14 +206,14 @@ a{
 
 .menu {
 	position: absolute;
-	left: 23px;
+	left: 27px;
 	top: -30px;
 	width: 90%;
 	height: 30px;
 }
 
-.menu .item {
-	float: left;
+.item {
+	display: inline-block;
 	width: 12.5%;
 	height: 30px;
 	overflow: hidden;
@@ -229,7 +231,7 @@ a{
 	background-position: center center;
 	background-size: 100% 100%;
 }
-.menu .item:hover {
+.item:hover {
 	color: #FFF;
 	text-shadow: 1px 1px 8px #FF0, -1px -1px 8px #FF0;
 }

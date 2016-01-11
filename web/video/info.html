@@ -7,62 +7,11 @@
 	</head>
 
 	<body style="margin:0; background-color: #F00;">
-		<div class="background">
-			<div class="contentCenter">
-				<div class="left">
-					<div class="toolbar" id="infoBar">
-						<img class="logo" src="../../img/logo.png">
-						<div class="title">视频资料</div>
-					</div>
-				</div>
-				<div class="right">
-					<div class="menu" id="menu">
-						<a href="../../index.html">
-							<div class="item">首页</div>
-						</a>
-						<a href="../summary/info.html">
-							<div class="item">简介</div>
-						</a>
-						<a href="../back/info.html">
-							<div class="item">会师背景</div>
-						</a>
-						<a href="../process/info.html">
-							<div class="item">会师过程</div>
-						</a>
-						<a href="../place/info.html">
-							<div class="item">会师地位</div>
-						</a>
-						<a href="../figure/info.html">
-							<div class="item">会师人物</div>
-						</a>
-						<a href="../history/info.html">
-							<div class="item">会师史料</div>
-						</a>
-						<a href="../video/info.html">
-							<div class="item">视频资料</div>
-						</a>
-					</div>
-					<div class="contentOut" id="infoFram"></div>
-					<div class="bot">
-						<div class="pageUp noselected" id="pageUp">
-							上一页
-						</div>
-						<div class="pageNum" id="pageNum"></div>
-						<div class="pageDown noselected" id="pageDown">
-							下一页
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="info"></div>
 	</body>
 
 	<script type="text/javascript">
-		data.bar = infoBar;
-		data.frm = infoFram;
-		data.up = pageUp;
-		data.num = pageNum;
-		data.dw = pageDown;
+		data.buildInfo("video");
 		data.btns = {
 			"专题片": [
 				"data/a1.htm"
